@@ -1,0 +1,25 @@
+{
+	"globals": {
+		"require": true,
+		"exports": true,
+		"module": true
+	},
+	"laxcomma": true,
+	"laxbreak": true,
+	"eqnull": true,
+	"smarttabs": true,
+	"globalstrict": true,
+	"curly": false,
+	"expr": true,
+	"devel": true,
+	"debug": true,
+	"funcscope": true,
+	"unused": true,
+	"bitwise": true,
+    "browser": true,
+	"boss": false,
+	"-W079": false,
+	"-W058": false,
+	"-W002": false,
+	"-W004": false
+}

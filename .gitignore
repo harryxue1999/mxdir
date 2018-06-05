@@ -1,5 +1,6 @@
 node_modules/
 *.DS_Store
 *.pdf
-pdf.json
-names.json
+*.json
+*.csv
+!package.json

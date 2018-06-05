@@ -20,9 +20,10 @@ exports.randIntNoRep = function (low, high, numElements) {
 
     if (numElements > high - low + 1) throw new Error('Number of elements out of range');
 
-    for (var i = 0; i < numElements; i++) {
+    for (var i = 0; true; i++) {
         var num = low + Math.round(Math.random() * (high - low));
-        if (arr.indexOf(num) == -1) arr.push(num);
+        if (arr.indexOf(num) === -1) arr.push(num);
+        if (arr.length === numElements) break;
     }
 
     return arr;

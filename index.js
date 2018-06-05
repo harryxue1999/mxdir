@@ -7,6 +7,7 @@ fs.exists('./pdf.json', function (exists) {
 
     if (!exists) {
         // TODO
+        return;
     }
 
     var json = require('./pdf.json');
@@ -26,6 +27,14 @@ fs.exists('./pdf.json', function (exists) {
      * @param {Array} arr
      */
     var formatArr = function (arr) {
+        // Standardize name
+        for (var i = 0; i < arr.length; i++) {
+            var name = arr[i].name.split(', ');
+
+            if (name[1].indexOf('(') !== -1)
+                name[1] = name[1].substring(name[1].indexOf('(')+1, name[1].indexOf(')'));
+            arr[i].name = `${name[1]} ${name[0]}`;
+        }
         return JSON.stringify(arr)
             .split('{')
             .join('{ ')
